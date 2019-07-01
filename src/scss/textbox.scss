@@ -44,6 +44,18 @@
             background: lighten($accent, 40%);
         };
     }
+
+    .wordstamp {
+        color: black;      
+            
+    }
+    .active {
+        color: rgb(30, 54, 160);
+    }
+    .wordstampSlow {
+        color: rgb(30, 54, 160);    
+            
+    }
 }
 
 .textbox-container {

@@ -1,5 +1,6 @@
 import { cleanHTML } from './clean-html';
 import { activateTimestamps } from './timestamps';
+import { activateWordstamps, timeHighlightingFast, timeHighlightingSlow } from './wordstamps';
 const $ = require('jquery');
 
 function countWords(str){
@@ -49,10 +50,16 @@ function watchFormatting(){
     }
 }
 
+
+
 function initWatchFormatting(){
     setInterval(function(){
         watchFormatting();
+        timeHighlightingFast();
     }, 100);
+    setInterval(function(){
+        timeHighlightingSlow();
+    }, 1000);
 }
 
 function setEditorContents( dirtyText, opts = {} ) {
@@ -69,6 +76,7 @@ function setEditorContents( dirtyText, opts = {} ) {
             $textbox[0].appendChild(newText);    
         }
         activateTimestamps();
+        activateWordstamps();
         $('.textbox-container').scrollTop(0);
     }
     
