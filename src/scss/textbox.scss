@@ -46,14 +46,17 @@
     }
 
     .wordstamp {
-        color: black;      
+        //color: black;  
+        color: lighten(black, 40%);      
             
     }
     .active {
-        color: rgb(30, 54, 160);
+        //color: rgb(30, 54, 160);
+        color: black;  
     }
     .wordstampSlow {
-        color: rgb(30, 54, 160);    
+        //color: rgb(30, 54, 160); 
+        color: black;     
             
     }
 }
